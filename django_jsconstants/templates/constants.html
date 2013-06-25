@@ -1,0 +1,21 @@
+<script type="text/javascript">
+    (function(window) {
+        
+        var constants = {{ constants|safe }}
+
+        window.jsconstants = {
+            "get":  function(module, constant) {
+                        if (constants[module] == undefined) {
+                            throw "Undefined module: " + module
+                        }
+                        else if (constants[module][constant] == undefined) {
+                            throw "Undefined constant: " + constant
+                        }
+                        else
+                        {
+                            return constants[module][constant]
+                        }
+                    }
+        }
+    })(window)
+</script>
