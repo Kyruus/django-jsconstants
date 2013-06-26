@@ -13,10 +13,10 @@ class JsConstantsServiceTests(TestCase):
     def tearDown(self):
         jsconstants._reset_all()
         obj = self.jsconstants_get_obj()
-        self.assertEqual(len(obj), 0)
+        self.assertEqual(len(obj[__name__]), 0)
 
     def jsconstants_get_obj(self):
-        json = jsconstants.get_constants_json()
+        json = jsconstants.get_constants_json(__name__)
         return simplejson.loads(json)
 
     def test_register_all(self):

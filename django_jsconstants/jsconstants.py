@@ -44,8 +44,12 @@ def register(path, *constants):
         else:
             raise ValueError("\'{0}\' is a callable object, expected variable.".format(name))
 
-def get_constants_json():
-    return simplejson.dumps(_constants)
+def get_constants_json(*modules):
+    """
+    Get the JSON object for the constants in the specified modules
+    """
+    filtered_constants = {module: _constants[module] for module in modules}
+    return simplejson.dumps(filtered_constants)
 
 def _is_constant(name):
     """
