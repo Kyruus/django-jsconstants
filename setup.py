@@ -11,7 +11,7 @@ setup(
     version='1.0',
     packages=['django_jsconstants',],
     license='Apache 2.0 license',
-    description='An interface to communicate constants between Python and Javascript.',
+    description='A Django application that allows Javascript running in the browser to use constants defined in Python',
     long_description=README,
     author='Kyruus',
     classifiers=[
