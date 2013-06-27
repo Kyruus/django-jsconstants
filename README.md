@@ -11,8 +11,6 @@ Before you can import constants into a template, they must first be registered i
 
 Example: `myapp/models.py`
 
-.. code-block: python
-
     from django_jsconstants import jsconstants
     
     COLOR_RED = "FF250D"
@@ -41,7 +39,6 @@ In your template, simply use the `jsconstants` template tag and pass it a list o
 
 Example file:`yourproject/templates/yourproject/base.html`
 
-.. code-block: html
 
     {% load jsconstants %}
 
@@ -60,6 +57,5 @@ Using the constants in your Javascript
 From inside of any Javascript function or file on the page, you can access the global ``jsconstants`` object to retrieve 
 registered constants.
 
-.. code-block:: javascript
 
     var COLOR_CHOICE_RED = jsconstants.get('myapp.models', 'COLOR_RED');
