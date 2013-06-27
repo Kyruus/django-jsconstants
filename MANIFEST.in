@@ -1,5 +1,5 @@
 include LICENSE
 include README.md
-recursive-include django_jsconstants/templates *
-recursive-include django_jsconstants/templatetags *
-recursive-include django_jsconstants/tests *
+recursive-include django_jsconstants/templates *.py *.html
+recursive-include django_jsconstants/templatetags *.py
+recursive-include django_jsconstants/tests *.py
