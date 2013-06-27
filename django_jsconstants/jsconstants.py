@@ -48,7 +48,7 @@ def get_constants_json(*modules):
     """
     Get the JSON object for the constants in the specified modules
     """
-    filtered_constants = {module: _constants[module] for module in modules}
+    filtered_constants = dict((module, _constants[module]) for module in modules)
     return simplejson.dumps(filtered_constants)
 
 def _is_constant(name):
