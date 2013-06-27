@@ -10,7 +10,6 @@ setup(
     name='django-jsconstants',
     version='1.0',
     packages=['django_jsconstants',],
-    include_package_data=True,
     license='Apache 2.0 license',
     description='An interface to communicate constants between Python and Javascript.',
     long_description=README,
